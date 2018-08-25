@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FilmsTableViewController.swift
 //  StarWars Fans
 //
 //  Created by Angela Velilla Aguirre on 25/8/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FilmsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
