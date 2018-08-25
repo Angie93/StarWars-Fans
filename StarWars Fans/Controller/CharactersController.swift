@@ -12,7 +12,7 @@ import Alamofire
 class CharactersController {
     
     func fetchStarWarsAllCharacters( onSuccess: @escaping (([Character]) -> Void),
-                             onError: @escaping ((_ error: NSError?) -> Void)) {
+                                     onError: @escaping ((_ error: NSError?) -> Void)) {
         
         let url = URL(string: "https://swapi.co/api/people/")
         var charactersResult: [Character] = []
