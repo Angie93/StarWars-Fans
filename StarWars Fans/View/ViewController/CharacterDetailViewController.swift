@@ -62,13 +62,26 @@ class CharacterDetailViewController: UIViewController {
         eyeColor.text = "Eye color: " + selectedCharacter.eyeColor
         hairColor.text = "Hair color: " + selectedCharacter.hairColor
         
-        let url = URL(string: selectedCharacter.image)
-        let data = try? Data(contentsOf: url!)
+//        let url = URL(string: selectedCharacter.image)
+//        let data = try? Data(contentsOf: url!)
+//
+//        if let imageData = data {
+//            let image = UIImage(data: imageData)
+//            self.image.image = image
+//        }
         
-        if let imageData = data {
-            let image = UIImage(data: imageData)
-            self.image.image = image
-        }
+        URLSession.shared.dataTask(with: NSURL(string: selectedCharacter.image)! as URL, completionHandler: { (data, response, error) -> Void in
+            
+            if error != nil {
+                print(error ?? "error")
+                return
+            }
+            DispatchQueue.main.async(execute: { () -> Void in
+                let image = UIImage(data: data!)
+                self.image.image = image
+            })
+            
+        }).resume()
     }
 
 }

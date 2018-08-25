@@ -30,13 +30,18 @@ class CharacterTableViewCell: UITableViewCell {
     
     func updateCellWithCharacter(_ character: Character) {
         resetCell()
-        let url = URL(string: character.image)
-        let data = try? Data(contentsOf: url!)
-        
-        if let imageData = data {
-            let image = UIImage(data: imageData)
-            self.characterImage.image = image
-        }
+        URLSession.shared.dataTask(with: NSURL(string: character.image)! as URL, completionHandler: { (data, response, error) -> Void in
+            
+            if error != nil {
+                print(error ?? "error")
+                return
+            }
+            DispatchQueue.main.async(execute: { () -> Void in
+                let image = UIImage(data: data!)
+                self.characterImage.image = image
+            })
+            
+        }).resume()
         
         self.characterName.text = character.name
         self.characterGender.text = character.gender

@@ -36,13 +36,18 @@ class FilmTableViewCell: UITableViewCell {
         let year = String(film.releaseDate.prefix(4))
         self.filmYear.text = year
         
-        let url = URL(string: film.image)
-        let data = try? Data(contentsOf: url!)
-        
-        if let imageData = data {
-            let image = UIImage(data: imageData)
-            self.filmImage.image = image
-        }
+        URLSession.shared.dataTask(with: NSURL(string: film.image)! as URL, completionHandler: { (data, response, error) -> Void in
+            
+            if error != nil {
+                print(error ?? "error")
+                return
+            }
+            DispatchQueue.main.async(execute: { () -> Void in
+                let image = UIImage(data: data!)
+                self.filmImage.image = image
+            })
+            
+        }).resume()
     }
     
     //MARK: - Private Methods
