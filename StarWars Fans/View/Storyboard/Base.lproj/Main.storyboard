@@ -37,21 +37,21 @@
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="Films" id="7da-gR-bhO"/>
                     <connections>
-                        <segue destination="9ZS-BO-c9l" kind="show" id="yEW-vF-WLZ"/>
+                        <segue destination="9ZS-BO-c9l" kind="show" identifier="segueToFilmDetail" id="yEW-vF-WLZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uha-7M-NV1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2064.8000000000002" y="99.400299850074973"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Film Detail Table View Controller-->
         <scene sceneID="0nk-pH-Swd">
             <objects>
-                <tableViewController id="9ZS-BO-c9l" sceneMemberID="viewController">
+                <tableViewController id="9ZS-BO-c9l" customClass="FilmDetailTableViewController" customModule="StarWars_Fans" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VCF-7k-99S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="QZ1-FG-LR1">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>

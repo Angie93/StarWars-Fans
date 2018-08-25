@@ -9,7 +9,16 @@
 import Foundation
 import Alamofire
 
+protocol FilmsControllerDelegate: class {
+    func finishFetchingCharactersForFilm(charactersArray: [Character])
+}
+
 class FilmsController {
+    
+    weak var delegate: FilmsControllerDelegate?
+    var numOfCharacters:Int = 0
+    
+    
     func fetchStarWarsFilms( onSuccess: @escaping (([Film]) -> Void),
                              onError: @escaping ((_ error: NSError?) -> Void)) {
         
@@ -53,21 +62,24 @@ class FilmsController {
         
     }
     
-    func getCharactersOn(film: Film) -> [Character] {
+    func getCharactersOn(film: Film) {
         
         var charactersArray:[Character] = []
+        numOfCharacters = film.charactersArray.count
         
         for currentChar in film.charactersArray {
             CharactersController().fetchStarWarsSpecificCharacter(urlString: currentChar,
                                                                   onSuccess: { (character) in
-                                                                    //Success Code
                                                                     charactersArray.append(character)
+                                                                    if charactersArray.count == self.numOfCharacters {
+                                                                    self.delegate?.finishFetchingCharactersForFilm(charactersArray: charactersArray)
+                                                                        return
+                                                                    }
             }) { (error) in
-                //error code
+                self.numOfCharacters = self.numOfCharacters - 1
                 print("Error getting character")
             }
         }
-        return charactersArray
     }
     
     fileprivate func mappFilm(filmDict: [String: Any]) -> Film? {

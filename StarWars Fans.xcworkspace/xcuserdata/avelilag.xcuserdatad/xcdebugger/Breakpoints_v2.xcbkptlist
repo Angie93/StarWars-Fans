@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StarWars Fans/View/ViewController/FilmsTableViewController.swift"
-            timestampString = "556903679.210181"
+            timestampString = "556907173.966066"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "startFetchingFilms()"
             landmarkType = "7">
             <Locations>
@@ -66,11 +66,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StarWars Fans/View/ViewController/FilmsTableViewController.swift"
-            timestampString = "556903679.210482"
+            timestampString = "556907173.966379"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "startFetchingFilms()"
             landmarkType = "7">
          </BreakpointContent>
@@ -82,11 +82,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StarWars Fans/Controller/FilmsController.swift"
-            timestampString = "556903679.210538"
+            timestampString = "556907173.9664429"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "fetchStarWarsFilms(onSuccess:onError:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -97,30 +97,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "StarWars Fans/Controller/FilmsController.swift"
-            timestampString = "556903679.210979"
+            filePath = "StarWars Fans/View/ViewController/FilmDetailTableViewController.swift"
+            timestampString = "556907173.96665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "getCharactersOn(film:)"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "loadViewResources()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "StarWars Fans/Controller/FilmsController.swift"
-            timestampString = "556903679.211231"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "FilmsController"
-            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -10,15 +10,29 @@ import UIKit
 
 class TitleTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var title: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        loadLocalizedResources()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    //MARK: - Public Methods
+    
+    func setTitleForCell(_ title: String) {
+        self.title.text = title
+    }
+    
+    
+    fileprivate func loadLocalizedResources() {
+        resetCell()
+        title.font = StyleController.fontArialBoldWIthSize(size:20)
+        title.textColor = StyleController.mainYellowColor()
+        title.text = "Something goes wrong, try it again!"
+    }
+    
+    fileprivate func resetCell() {
+        self.title.text = ""
     }
     
 }

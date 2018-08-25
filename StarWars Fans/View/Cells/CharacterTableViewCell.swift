@@ -26,14 +26,7 @@ class CharacterTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func loadLocalizedResources() {
-        characterName.font = StyleController.fontArialBoldWIthSize(size:18)
-        characterName.textColor = StyleController.mainYellowColor()
-        characterGender.font = StyleController.fontArialRegularWIthSize(size:16)
-        characterGender.textColor = UIColor.white
-        characterBirthday.font = StyleController.fontArialRegularWIthSize(size:16)
-        characterBirthday.textColor = UIColor.white
-    }
+    //MARK: - Public methods
     
     func updateCellWithCharacter(_ character: Character) {
         resetCell()
@@ -50,7 +43,18 @@ class CharacterTableViewCell: UITableViewCell {
         self.characterBirthday.text = character.birthYear
     }
     
-    func resetCell() {
+    //MARK: - Private methods
+    
+    fileprivate func loadLocalizedResources() {
+        characterName.font = StyleController.fontArialBoldWIthSize(size:18)
+        characterName.textColor = StyleController.mainYellowColor()
+        characterGender.font = StyleController.fontArialRegularWIthSize(size:16)
+        characterGender.textColor = UIColor.white
+        characterBirthday.font = StyleController.fontArialRegularWIthSize(size:16)
+        characterBirthday.textColor = UIColor.white
+    }
+    
+    fileprivate func resetCell() {
         self.characterImage.image = nil
         self.characterName.text = ""
         self.characterGender.text = ""

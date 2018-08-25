@@ -17,13 +17,16 @@ class ErrorTableViewCell: UITableViewCell {
         loadLocalizedResources()
     }
 
-    func loadLocalizedResources() {
+    //MARK: - Private methods
+    
+    fileprivate func loadLocalizedResources() {
+        resetCell()
         errorLabel.font = StyleController.fontArialBoldWIthSize(size:18)
         errorLabel.textColor = StyleController.mainYellowColor()
         errorLabel.text = "Something goes wrong, try it again!"
     }
     
-    func resetCell() {
+    fileprivate func resetCell() {
         self.errorLabel.text = ""
     }
 

@@ -26,15 +26,8 @@ class FilmTableViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
-
-    func loadLocalizedResources() {
-        filmName.font = StyleController.fontArialBoldWIthSize(size:17)
-        filmName.textColor = StyleController.mainYellowColor()
-        filmCrawl.font = StyleController.fontArialRegularWIthSize(size:15)
-        filmCrawl.textColor = UIColor.white
-        filmYear.font = StyleController.fontArialRegularWIthSize(size:13)
-        filmYear.textColor = UIColor.white
-    }
+    
+    //MARK: - Public Methods
     
     func updateCellWithFilm(_ film: Film) {
         resetCell()
@@ -52,7 +45,18 @@ class FilmTableViewCell: UITableViewCell {
         self.filmYear.text = year
     }
     
-    func resetCell() {
+    //MARK: - Private Methods
+
+    fileprivate func loadLocalizedResources() {
+        filmName.font = StyleController.fontArialBoldWIthSize(size:17)
+        filmName.textColor = StyleController.mainYellowColor()
+        filmCrawl.font = StyleController.fontArialRegularWIthSize(size:15)
+        filmCrawl.textColor = UIColor.white
+        filmYear.font = StyleController.fontArialRegularWIthSize(size:13)
+        filmYear.textColor = UIColor.white
+    }
+    
+    fileprivate func resetCell() {
         self.filmImage.image = nil
         self.filmName.text = ""
         self.filmCrawl.text = ""

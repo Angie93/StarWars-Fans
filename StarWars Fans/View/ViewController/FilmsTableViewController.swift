@@ -12,6 +12,8 @@ class FilmsTableViewController: UITableViewController {
 
     var filmsArray:[Film] = []
     var hasError = false
+    var filmSelected:Film!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,12 +75,20 @@ class FilmsTableViewController: UITableViewController {
             startFetchingFilms()
             
         } else {
-            
+            filmSelected = filmsArray[indexPath.row]
+            performSegue(withIdentifier: "segueToFilmDetail", sender: self)
         }
         tableView.deselectRow(at: indexPath, animated: true)
-//        productSelected = productsArray[indexPath.row]
-//        performSegue(withIdentifier: "segueToDetail", sender: self)
-
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToFilmDetail" {
+            let destinationVC :FilmDetailTableViewController = segue.destination as! FilmDetailTableViewController
+            destinationVC.selectedFilm = filmSelected
+            
+        }
     }
     
 }
