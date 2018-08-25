@@ -12,6 +12,8 @@ class FilmDetailTableViewController: UITableViewController, FilmsControllerDeleg
 
     var selectedFilm:Film!
     var charactersArray:[Character] = []
+    var characterSelected:Character!
+    
     var hasError = false
     
     
@@ -95,16 +97,27 @@ class FilmDetailTableViewController: UITableViewController, FilmsControllerDeleg
         }
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if hasError {
+            loadViewResources()
+        } else {
+            if indexPath.section == 1 && indexPath.row != 0 {
+                characterSelected = charactersArray[indexPath.row-1]
+                performSegue(withIdentifier: "segueFromFilmDetailToCharacterDetail", sender: self)
+            }
+        }
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "segueFromFilmDetailToCharacterDetail" {
+            let destinationVC :CharacterDetailViewController = segue.destination as! CharacterDetailViewController
+            destinationVC.selectedCharacter = characterSelected
+            
+        }
     }
-    */
     
     // MARK: - Films Controller Delegate
     func finishFetchingCharactersForFilm(charactersArray: [Character]) {

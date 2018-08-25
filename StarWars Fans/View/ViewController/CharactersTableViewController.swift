@@ -11,6 +11,8 @@ import UIKit
 class CharactersTableViewController: UITableViewController {
 
     var charactersArray:[Character] = []
+    var characterSelected:Character!
+    
     var hasError = false
     
     override func viewDidLoad() {
@@ -68,12 +70,24 @@ class CharactersTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if hasError {
+            fetchCharacters()
+            
+        } else {
+            characterSelected = charactersArray[indexPath.row]
+            performSegue(withIdentifier: "segueToCharacterDetail", sender: self)
+        }
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "segueToCharacterDetail" {
+            let destinationVC :CharacterDetailViewController = segue.destination as! CharacterDetailViewController
+            destinationVC.selectedCharacter = characterSelected
+        }
     }
 
 }

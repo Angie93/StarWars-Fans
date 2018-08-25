@@ -31,6 +31,11 @@ class FilmTableViewCell: UITableViewCell {
     
     func updateCellWithFilm(_ film: Film) {
         resetCell()
+        self.filmName.text = film.title
+        self.filmCrawl.text = film.openingCrawl
+        let year = String(film.releaseDate.prefix(4))
+        self.filmYear.text = year
+        
         let url = URL(string: film.image)
         let data = try? Data(contentsOf: url!)
         
@@ -38,11 +43,6 @@ class FilmTableViewCell: UITableViewCell {
             let image = UIImage(data: imageData)
             self.filmImage.image = image
         }
-        
-        self.filmName.text = film.title
-        self.filmCrawl.text = film.openingCrawl
-        let year = String(film.releaseDate.prefix(4))
-        self.filmYear.text = year
     }
     
     //MARK: - Private Methods

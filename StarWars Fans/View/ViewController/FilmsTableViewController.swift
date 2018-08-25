@@ -78,7 +78,7 @@ class FilmsTableViewController: UITableViewController {
             filmSelected = filmsArray[indexPath.row]
             performSegue(withIdentifier: "segueToFilmDetail", sender: self)
         }
-        tableView.deselectRow(at: indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: false)
     }
     
     // MARK: - Navigation

@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StarWars Fans/View/ViewController/FilmsTableViewController.swift"
-            timestampString = "556907173.966066"
+            timestampString = "556908942.936847"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -66,7 +66,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StarWars Fans/View/ViewController/FilmsTableViewController.swift"
-            timestampString = "556907173.966379"
+            timestampString = "556908942.937176"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -82,28 +82,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StarWars Fans/Controller/FilmsController.swift"
-            timestampString = "556907173.9664429"
+            timestampString = "556908942.937242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
             endingLineNumber = "33"
             landmarkName = "fetchStarWarsFilms(onSuccess:onError:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "StarWars Fans/View/ViewController/FilmDetailTableViewController.swift"
-            timestampString = "556907173.96665"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "loadViewResources()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
