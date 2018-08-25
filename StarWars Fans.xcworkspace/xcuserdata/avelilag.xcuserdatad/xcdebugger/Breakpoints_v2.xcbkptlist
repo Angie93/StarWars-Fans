@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StarWars Fans/View/ViewController/FilmsTableViewController.swift"
-            timestampString = "556900535.4745131"
+            timestampString = "556902308.0606771"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -66,7 +66,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StarWars Fans/View/ViewController/FilmsTableViewController.swift"
-            timestampString = "556900535.475179"
+            timestampString = "556902308.061018"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -82,28 +82,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StarWars Fans/Controller/FilmsController.swift"
-            timestampString = "556900535.4754291"
+            timestampString = "556902308.061088"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
             endingLineNumber = "24"
             landmarkName = "fetchStarWarsFilms(onSuccess:onError:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "StarWars Fans/View/Cells/FilmTableViewCell.swift"
-            timestampString = "556900535.475638"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "updateCellWithFilm(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
