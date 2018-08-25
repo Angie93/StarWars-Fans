@@ -23,15 +23,6 @@ class CharactersController {
                           encoding: JSONEncoding.default)
             .responseJSON { response in
                 print(response)
-                //to get status code
-                if let status = response.response?.statusCode {
-                    switch(status){
-                    case 201:
-                        print("success")
-                    default:
-                        onError(self.createCharacterError())
-                    }
-                }
                 //get JSON return value
                 if let result = response.result.value {
                     let JSON = result as! NSDictionary
@@ -75,15 +66,6 @@ class CharactersController {
                           encoding: JSONEncoding.default)
             .responseJSON { response in
                 print(response)
-                //to get status code
-                if let status = response.response?.statusCode {
-                    switch(status){
-                    case 201:
-                        print("success")
-                    default:
-                        print("error founded")
-                    }
-                }
                 //get JSON return value
                 if let result = response.result.value {
                     let JSON = result as! NSDictionary

@@ -24,6 +24,9 @@
 		91011ACC2131A1F2003BA2BD /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91011ACA2131A1F2003BA2BD /* CharacterTableViewCell.swift */; };
 		91011ACD2131A1F2003BA2BD /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91011ACB2131A1F2003BA2BD /* CharacterTableViewCell.xib */; };
 		91011ACF2131A480003BA2BD /* CharactersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91011ACE2131A480003BA2BD /* CharactersTableViewController.swift */; };
+		91011AD12131AB67003BA2BD /* FilmDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91011AD02131AB67003BA2BD /* FilmDetailTableViewController.swift */; };
+		91011AD42131AF66003BA2BD /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91011AD22131AF66003BA2BD /* TitleTableViewCell.swift */; };
+		91011AD52131AF66003BA2BD /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91011AD32131AF66003BA2BD /* TitleTableViewCell.xib */; };
 		D5B25BFE75C566ADDCE66BA3 /* Pods_StarWars_Fans.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56B48ABD8ADDD4E0DE4CD30 /* Pods_StarWars_Fans.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +50,9 @@
 		91011ACA2131A1F2003BA2BD /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
 		91011ACB2131A1F2003BA2BD /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterTableViewCell.xib; sourceTree = "<group>"; };
 		91011ACE2131A480003BA2BD /* CharactersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersTableViewController.swift; sourceTree = "<group>"; };
+		91011AD02131AB67003BA2BD /* FilmDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailTableViewController.swift; sourceTree = "<group>"; };
+		91011AD22131AF66003BA2BD /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		91011AD32131AF66003BA2BD /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
 		A56B48ABD8ADDD4E0DE4CD30 /* Pods_StarWars_Fans.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWars_Fans.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C3287741C612FCFE8D17FD /* Pods-StarWars Fans.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWars Fans.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWars Fans/Pods-StarWars Fans.release.xcconfig"; sourceTree = "<group>"; };
 		E7E1527C84D2EA1CD9E962FF /* Pods-StarWars Fans.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWars Fans.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarWars Fans/Pods-StarWars Fans.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +152,7 @@
 			children = (
 				91011A9A21313A00003BA2BD /* FilmsTableViewController.swift */,
 				91011ACE2131A480003BA2BD /* CharactersTableViewController.swift */,
+				91011AD02131AB67003BA2BD /* FilmDetailTableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -167,6 +174,8 @@
 				91011AC221319C1C003BA2BD /* ErrorTableViewCell.xib */,
 				91011ABE213159EC003BA2BD /* FilmTableViewCell.swift */,
 				91011AC021316AD7003BA2BD /* FilmTableViewCell.xib */,
+				91011AD22131AF66003BA2BD /* TitleTableViewCell.swift */,
+				91011AD32131AF66003BA2BD /* TitleTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -244,6 +253,7 @@
 				91011AA321313A02003BA2BD /* LaunchScreen.storyboard in Resources */,
 				91011AC121316AD8003BA2BD /* FilmTableViewCell.xib in Resources */,
 				91011ACD2131A1F2003BA2BD /* CharacterTableViewCell.xib in Resources */,
+				91011AD52131AF66003BA2BD /* TitleTableViewCell.xib in Resources */,
 				91011AA021313A02003BA2BD /* Assets.xcassets in Resources */,
 				91011A9E21313A00003BA2BD /* Main.storyboard in Resources */,
 			);
@@ -297,8 +307,10 @@
 			files = (
 				91011AB721313E48003BA2BD /* Film.swift in Sources */,
 				91011ACF2131A480003BA2BD /* CharactersTableViewController.swift in Sources */,
+				91011AD42131AF66003BA2BD /* TitleTableViewCell.swift in Sources */,
 				91011AB921313EBF003BA2BD /* CharactersController.swift in Sources */,
 				91011AC921319DB5003BA2BD /* ErrorTableViewCell.swift in Sources */,
+				91011AD12131AB67003BA2BD /* FilmDetailTableViewController.swift in Sources */,
 				91011ABB213146A9003BA2BD /* FilmsController.swift in Sources */,
 				91011A9B21313A00003BA2BD /* FilmsTableViewController.swift in Sources */,
 				91011AB321313CC4003BA2BD /* StyleController.swift in Sources */,
