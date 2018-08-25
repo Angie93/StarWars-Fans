@@ -12,6 +12,7 @@
 		91011A9E21313A00003BA2BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91011A9C21313A00003BA2BD /* Main.storyboard */; };
 		91011AA021313A02003BA2BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91011A9F21313A02003BA2BD /* Assets.xcassets */; };
 		91011AA321313A02003BA2BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91011AA121313A02003BA2BD /* LaunchScreen.storyboard */; };
+		D5B25BFE75C566ADDCE66BA3 /* Pods_StarWars_Fans.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56B48ABD8ADDD4E0DE4CD30 /* Pods_StarWars_Fans.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		91011A9F21313A02003BA2BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91011AA221313A02003BA2BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91011AA421313A02003BA2BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A56B48ABD8ADDD4E0DE4CD30 /* Pods_StarWars_Fans.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWars_Fans.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4C3287741C612FCFE8D17FD /* Pods-StarWars Fans.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWars Fans.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWars Fans/Pods-StarWars Fans.release.xcconfig"; sourceTree = "<group>"; };
+		E7E1527C84D2EA1CD9E962FF /* Pods-StarWars Fans.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWars Fans.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarWars Fans/Pods-StarWars Fans.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B25BFE75C566ADDCE66BA3 /* Pods_StarWars_Fans.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5032EF288B5ADD1B643723D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A56B48ABD8ADDD4E0DE4CD30 /* Pods_StarWars_Fans.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D863CCE407EAB813D10B9E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7E1527C84D2EA1CD9E962FF /* Pods-StarWars Fans.debug.xcconfig */,
+				B4C3287741C612FCFE8D17FD /* Pods-StarWars Fans.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		91011A8C21313A00003BA2BD = {
 			isa = PBXGroup;
 			children = (
 				91011A9721313A00003BA2BD /* StarWars Fans */,
 				91011A9621313A00003BA2BD /* Products */,
+				8D863CCE407EAB813D10B9E9 /* Pods */,
+				5032EF288B5ADD1B643723D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91011AA721313A02003BA2BD /* Build configuration list for PBXNativeTarget "StarWars Fans" */;
 			buildPhases = (
+				18830FA51848D88F33186F18 /* [CP] Check Pods Manifest.lock */,
 				91011A9121313A00003BA2BD /* Sources */,
 				91011A9221313A00003BA2BD /* Frameworks */,
 				91011A9321313A00003BA2BD /* Resources */,
+				32FF3402A452249987681F9D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18830FA51848D88F33186F18 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarWars Fans-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32FF3402A452249987681F9D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-StarWars Fans/Pods-StarWars Fans-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StarWars Fans/Pods-StarWars Fans-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		91011A9121313A00003BA2BD /* Sources */ = {
@@ -278,6 +343,7 @@
 		};
 		91011AA821313A02003BA2BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7E1527C84D2EA1CD9E962FF /* Pods-StarWars Fans.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +361,7 @@
 		};
 		91011AA921313A02003BA2BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4C3287741C612FCFE8D17FD /* Pods-StarWars Fans.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
