@@ -13,6 +13,9 @@
 		91011AA021313A02003BA2BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91011A9F21313A02003BA2BD /* Assets.xcassets */; };
 		91011AA321313A02003BA2BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91011AA121313A02003BA2BD /* LaunchScreen.storyboard */; };
 		91011AB321313CC4003BA2BD /* StyleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91011AB221313CC4003BA2BD /* StyleController.swift */; };
+		91011AB521313E1F003BA2BD /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91011AB421313E1F003BA2BD /* Character.swift */; };
+		91011AB721313E48003BA2BD /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91011AB621313E48003BA2BD /* Film.swift */; };
+		91011AB921313EBF003BA2BD /* CharactersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91011AB821313EBF003BA2BD /* CharactersController.swift */; };
 		D5B25BFE75C566ADDCE66BA3 /* Pods_StarWars_Fans.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56B48ABD8ADDD4E0DE4CD30 /* Pods_StarWars_Fans.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +28,9 @@
 		91011AA221313A02003BA2BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91011AA421313A02003BA2BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91011AB221313CC4003BA2BD /* StyleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleController.swift; sourceTree = "<group>"; };
+		91011AB421313E1F003BA2BD /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		91011AB621313E48003BA2BD /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		91011AB821313EBF003BA2BD /* CharactersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersController.swift; sourceTree = "<group>"; };
 		A56B48ABD8ADDD4E0DE4CD30 /* Pods_StarWars_Fans.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWars_Fans.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C3287741C612FCFE8D17FD /* Pods-StarWars Fans.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWars Fans.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWars Fans/Pods-StarWars Fans.release.xcconfig"; sourceTree = "<group>"; };
 		E7E1527C84D2EA1CD9E962FF /* Pods-StarWars Fans.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWars Fans.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarWars Fans/Pods-StarWars Fans.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +99,7 @@
 		91011AAB21313BA6003BA2BD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				91011AB821313EBF003BA2BD /* CharactersController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -111,6 +118,8 @@
 		91011AAD21313BBB003BA2BD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				91011AB421313E1F003BA2BD /* Character.swift */,
+				91011AB621313E48003BA2BD /* Film.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -259,9 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91011AB721313E48003BA2BD /* Film.swift in Sources */,
+				91011AB921313EBF003BA2BD /* CharactersController.swift in Sources */,
 				91011A9B21313A00003BA2BD /* FilmsTableViewController.swift in Sources */,
 				91011AB321313CC4003BA2BD /* StyleController.swift in Sources */,
 				91011A9921313A00003BA2BD /* AppDelegate.swift in Sources */,
+				91011AB521313E1F003BA2BD /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
