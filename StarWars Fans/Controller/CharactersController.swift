@@ -27,7 +27,7 @@ class CharactersController {
                 if let status = response.response?.statusCode {
                     switch(status){
                     case 201:
-                        print("example success")
+                        print("success")
                     default:
                         onError(self.createCharacterError())
                     }
@@ -79,9 +79,9 @@ class CharactersController {
                 if let status = response.response?.statusCode {
                     switch(status){
                     case 201:
-                        print("example success")
+                        print("success")
                     default:
-                        onError(self.createCharacterError())
+                        print("error founded")
                     }
                 }
                 //get JSON return value

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="filmsCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="filmCell" rowHeight="151" id="Cgu-al-SdI" customClass="FilmTableViewCell" customModule="StarWars_Fans" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cgu-al-SdI" id="F3c-Ji-N8n">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="150.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Spb-fd-PVH">
+                        <rect key="frame" x="15" y="11" width="84" height="129"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Spb-fd-PVH" secondAttribute="height" multiplier="83:128" id="Bvf-MA-qa4"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Film Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mo6-f9-Nzt">
+                        <rect key="frame" x="119" y="21" width="220" height="19"/>
+                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
+                        <color key="textColor" red="0.97254901960784312" green="0.8901960784313725" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otQ-Cp-4bA">
+                        <rect key="frame" x="119" y="50" width="220" height="69"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="1996" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06e-jG-XPu">
+                        <rect key="frame" x="119" y="124" width="220" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="JWV-TU-9A2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="Mo6-f9-Nzt" firstAttribute="leading" secondItem="Spb-fd-PVH" secondAttribute="trailing" constant="20" id="0Q4-XU-a9q"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Mo6-f9-Nzt" secondAttribute="trailing" constant="20" id="17b-ye-xl7"/>
+                    <constraint firstItem="otQ-Cp-4bA" firstAttribute="trailing" secondItem="Mo6-f9-Nzt" secondAttribute="trailing" id="27t-vH-fye"/>
+                    <constraint firstItem="06e-jG-XPu" firstAttribute="leading" secondItem="otQ-Cp-4bA" secondAttribute="leading" id="7Df-zS-ekt"/>
+                    <constraint firstItem="otQ-Cp-4bA" firstAttribute="top" secondItem="Mo6-f9-Nzt" secondAttribute="bottom" constant="10" id="Deg-63-tcO"/>
+                    <constraint firstItem="Mo6-f9-Nzt" firstAttribute="top" secondItem="Spb-fd-PVH" secondAttribute="top" constant="10" id="EEh-Ig-DG6"/>
+                    <constraint firstItem="06e-jG-XPu" firstAttribute="bottom" secondItem="Spb-fd-PVH" secondAttribute="bottom" id="ZSp-fn-jJv"/>
+                    <constraint firstItem="Spb-fd-PVH" firstAttribute="leading" secondItem="F3c-Ji-N8n" secondAttribute="leading" constant="15" id="ZdB-2T-KQr"/>
+                    <constraint firstAttribute="bottom" secondItem="Spb-fd-PVH" secondAttribute="bottom" constant="11" id="fTE-sP-dso"/>
+                    <constraint firstItem="06e-jG-XPu" firstAttribute="top" secondItem="otQ-Cp-4bA" secondAttribute="bottom" constant="5" id="gHW-0T-C3v"/>
+                    <constraint firstItem="Spb-fd-PVH" firstAttribute="top" secondItem="F3c-Ji-N8n" secondAttribute="top" constant="11" id="gcF-nC-x25"/>
+                    <constraint firstItem="06e-jG-XPu" firstAttribute="trailing" secondItem="Mo6-f9-Nzt" secondAttribute="trailing" id="nHd-cB-i4M"/>
+                    <constraint firstItem="otQ-Cp-4bA" firstAttribute="leading" secondItem="Mo6-f9-Nzt" secondAttribute="leading" id="zLz-cH-1pv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="filmCrawl" destination="otQ-Cp-4bA" id="Fed-fd-wsT"/>
+                <outlet property="filmImage" destination="Spb-fd-PVH" id="iJe-6y-QCL"/>
+                <outlet property="filmName" destination="Mo6-f9-Nzt" id="HyW-Wx-aiT"/>
+                <outlet property="filmYear" destination="06e-jG-XPu" id="Xh7-rI-FmW"/>
+            </connections>
+            <point key="canvasLocation" x="30.5" y="14.5"/>
+        </tableViewCell>
+    </objects>
+</document>

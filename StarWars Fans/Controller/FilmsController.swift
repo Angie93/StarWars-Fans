@@ -26,7 +26,7 @@ class FilmsController {
                 if let status = response.response?.statusCode {
                     switch(status){
                     case 201:
-                        print("example success")
+                        print("success")
                     default:
                         onError(self.createFilmError())
                     }
@@ -60,6 +60,23 @@ class FilmsController {
                 
         }
         
+    }
+    
+    func getCharactersOn(film: Film) -> [Character] {
+        
+        var charactersArray:[Character] = []
+        
+        for currentChar in film.charactersArray {
+            CharactersController().fetchStarWarsSpecificCharacter(urlString: currentChar,
+                                                                  onSuccess: { (character) in
+                                                                    //Success Code
+                                                                    charactersArray.append(character)
+            }) { (error) in
+                //error code
+                print("Error getting character")
+            }
+        }
+        return charactersArray
     }
     
     fileprivate func mappFilm(filmDict: [String: Any]) -> Film? {
